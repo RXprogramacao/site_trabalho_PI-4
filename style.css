@@ -1,0 +1,166 @@
+/* Ajuste para o Body */
+body {
+    background-color: #2b3647; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-family: Arial, sans-serif; /* Definir uma fonte mais amigável */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Garante que os elementos sigam uma ordem vertical */
+    align-items: center; /* Centraliza o conteúdo */
+}
+
+/* Ajuste para o Container Principal */
+.container {
+    width: 90%; /* Mantém espaço nas laterais */
+    max-width: 1200px; /* Limita a largura máxima */
+    padding: 20px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Seções */
+section {
+    display: none;
+    padding: 20px;
+}
+
+section.active {
+    display: block;
+}
+
+/* Listas */
+section ul {
+    list-style-position: inside;
+    margin: 0 auto;
+    padding: 0;
+    width: 80%;
+}
+
+section ul li {
+    margin-bottom: 10px;
+}
+
+/* Títulos */
+section h1, section h2, section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Formulário */
+.form-container {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 10px;
+    color: white;
+}
+
+.form-container input, .form-container textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #d4a373;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Efeito de filtro na logo quando o mouse passa sobre os botões */
+.icon button:hover ~ header img.logo {
+    filter: invert(2%) sepia(50%) saturate(10%);
+}
+
+/* Logo */
+header img.logo {
+    width: 100px;
+    height: auto;
+    transition: filter 0.3s ease;
+    border: 2px solid #808080;
+    border-radius: 8px;
+    padding: 5px;
+    background-color: #2b3647;
+}
+
+header:hover img.logo {
+    filter: invert(2%) sepia(50%) saturate(10%) ;
+}
+
+/* Botões */
+.icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon button img {
+    width: 24px;
+    height: 24px;
+}
+
+.icon button span {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    display: block;
+}
+
+.icon button:hover {
+    transform: scale(1.1);
+    color: #d4a373;
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Perfis */
+.content, .profiles {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}

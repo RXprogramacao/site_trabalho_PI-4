@@ -1,0 +1,50 @@
+/* Restringe o tamanho e organiza os botões dentro do cabeçalho */
+header {
+    display: flex;
+    justify-content: space-around; /* Espalha os botões igualmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    background-color: #e6ad5e; /* Cor de fundo do cabeçalho */
+    padding: 10px 0; /* Adiciona um pouco de espaço no topo e na base */
+}
+
+.icon {
+    display: flex;
+    flex-direction: column; /* Coloca os ícones e os textos em coluna */
+    align-items: center; /* Alinha os ícones e textos no centro */
+}
+
+button {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column; /* Para o ícone e o texto ficarem um embaixo do outro */
+    align-items: center;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button img {
+    width: 30px; /* Ajusta o tamanho do ícone */
+    height: 30px; /* Ajusta o tamanho do ícone */
+    margin-bottom: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+button span {
+    font-size: 12px; /* Tamanho do texto */
+    color: white; /* Cor do texto */
+}
+
+header .icon button:hover {
+    background-color: #444; /* Cor de fundo do botão quando passa o mouse */
+    border-radius: 5px; /* Bordas arredondadas nos botões */
+    padding: 10px;
+}
+
+/* Seção ativa */
+section {
+    display: none;
+}
+
+section.active {
+    display: block;
+}
